@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 function ArrayUpdater() {
-  // Sử dụng useState để khai báo mảng gồm 3 phần tử [1, 2, 3]
+  // Khởi tạo trạng thái với mảng [1, 2, 3]
   const [numbers, setNumbers] = useState([1, 2, 3]);
 
   // Hàm xử lý khi nhấn nút để tăng giá trị của mỗi phần tử trong mảng
@@ -11,6 +11,9 @@ function ArrayUpdater() {
     const updatedNumbers = numbers.map(number => number + 1);
     // Cập nhật lại mảng mới vào trạng thái
     setNumbers(updatedNumbers);
+
+    // Hiển thị giá trị mảng mới trong console
+    console.log('Updated Array:', updatedNumbers);
   };
 
   return (
